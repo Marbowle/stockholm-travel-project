@@ -11,11 +11,12 @@ body {
 }
 .grid {
   display: grid;
-  grid-gap: 40px;
+  grid-gap: 64px;
 }
 .img-responsive {
-  max-width: 100%;
+  width: 100%;
   display: block;
+  aspect-ratio: 16/9;
 }
 .grid-2-columns {
   grid-template-columns: 1fr 1fr;
@@ -26,15 +27,25 @@ body {
 .grid-3-columns-with-first-narrow {
   grid-template-columns: 1fr 2fr 2fr;
 }
+.embed {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+.stockholm-photos {
+  margin: 30px 0;
+}
 .card {
   background: white;
   margin: 30px 0;
+}
+.card-header.grid {
+  grid-gap: 0;
 }
 .card-body {
   padding: 30px;
 }
 .card-footer {
-  padding: 0 20px 30px;
+  padding: 0 30px 30px;
 }
 .btn {
   display: block;
@@ -52,7 +63,7 @@ body {
 section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 100px;
 }
 section .secondary {
   background: #f8f8f8;
@@ -146,10 +157,9 @@ footer {
       rgba(39, 32, 68, 0.9),
       rgba(39, 32, 68, 0.9)
     ),
-    url(../images/stockholm-skyline.jpg);
+    url(../images/stockholm-subway-art-rainbow.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 100px 0;
 }
 footer h3 {
   font-weight: 700;
@@ -193,5 +203,11 @@ footer a {
   }
   section {
     padding: 30px;
+  }
+  .card-header img {
+    display: none;
+  }
+  .embed {
+    aspect-ratio: 16/9;
   }
 }
